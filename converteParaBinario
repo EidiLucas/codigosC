@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char** argv) {
+	int num=0, binario=0;
+	cout<<"Mostra o valor em binario";
+	cout<<"\nDigite o valor a ser convertido: ";
+	cin>>num;
+	if(num<0){
+		while(num<0){
+			cout<<"Valor invalido. Digite um valor positivo: ";
+			cin>>num;
+		}
+	}
+	cout<<"O numero em binario eh: ";
+	while(num>=1){
+		binario = num % 2;
+		num = num / 2;
+		cout<<binario;
+	}
+	
+}
