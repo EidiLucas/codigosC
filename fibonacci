@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char** argv) {
+	int termo=0, n1=0, n2=1, fibo=0, cont=1;
+	cout<<"Calcula termo Fibonacci";
+	do{
+		cout<<"Digite o termo desejado: ";
+		cin>>termo;
+	}while(termo<=0);
+	do{
+		fibo=n1+n2;
+		n1=n2;
+		n2=fibo;
+		cont=cont+1;
+	}while(cont!=termo);
+	cout<<fibo;
+}
