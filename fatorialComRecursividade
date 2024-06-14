@@ -1,0 +1,33 @@
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
+
+int consistir(){
+ int n = 0;
+ do{
+     cout<<"Digite um valor: ";
+     cin>>n;
+ }while((n<0)||(n>3000));
+ return (n);
+}
+
+int soma(int n){
+ if (n==0){
+   return (0);           
+}
+else{
+ return (n + soma(n-1));
+}
+}
+
+
+int main(int argc, char *argv[])
+{
+    int num = 0;
+    cout<<"Soma inteiros\n";
+    num = consistir();
+    cout<<soma(num);
+    system("PAUSE");
+    return EXIT_SUCCESS;
+}
