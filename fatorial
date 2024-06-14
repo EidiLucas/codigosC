@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char** argv) {
+	int vetorA[5],vetorFatorial[5],indice=0, aux=0;
+	for(indice=0; indice<=4; indice=indice+1){
+		vetorA[indice]=0;
+		vetorFatorial[indice]=1;
+	}
+	cout<<"Calcula fatorial\n";
+	for(indice=0; indice<=4; indice=indice+1){
+		cout<<"Digite um valor: ";
+		cin>>vetorA[indice];
+	}
+	for(indice=0; indice<=4; indice=indice+1){
+		aux = vetorA[indice];
+		while(aux>1){
+			vetorFatorial[indice]=vetorFatorial[indice]*aux;
+			aux=aux-1;
+		}
+	}
+	cout<<"VetorA: ";
+	for(indice=0; indice<=4; indice=indice+1){
+		cout<<vetorA[indice]<<" ";	
+	}
+	cout<<"VetorFatorial: ";
+	for(indice=0; indice<=4; indice=indice+1){
+		cout<<vetorFatorial[indice]<<" ";	
+	}
+	return 0;
+}
